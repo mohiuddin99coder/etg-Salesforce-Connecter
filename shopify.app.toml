@@ -1,3 +1,29 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-scopes = "write_products"
+client_id = "943096bd26bdf8a3decd2d2110b83055"
+name = "etg-salesforce-connecter"
+handle = "etg-salesforce-connecter"
+application_url = "https://fathers-venezuela-dose-poison.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-b4b6a9c1.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_assigned_fulfillment_orders,read_content,read_customers,read_metaobject_definitions,read_metaobjects,read_orders,read_products,write_assigned_fulfillment_orders,write_content,write_customers,write_metaobject_definitions,write_metaobjects,write_orders,write_products"
+
+[auth]
+redirect_urls = [
+  "https://fathers-venezuela-dose-poison.trycloudflare.com/auth/callback",
+  "https://fathers-venezuela-dose-poison.trycloudflare.com/auth/shopify/callback",
+  "https://fathers-venezuela-dose-poison.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-07"
+
+[pos]
+embedded = false
